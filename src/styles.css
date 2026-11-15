@@ -1,0 +1,74 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-done: var(--done);
+  --color-done-soft: var(--done-soft);
+  --shadow-soft: var(--shadow-soft);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.97 0.018 85);
+  --foreground: oklch(0.28 0.03 60);
+  --card: oklch(0.99 0.01 85);
+  --card-foreground: oklch(0.28 0.03 60);
+  --popover: oklch(0.99 0.01 85);
+  --popover-foreground: oklch(0.28 0.03 60);
+  --primary: oklch(0.52 0.07 145);
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: oklch(0.93 0.03 80);
+  --secondary-foreground: oklch(0.32 0.03 60);
+  --muted: oklch(0.93 0.02 82);
+  --muted-foreground: oklch(0.52 0.03 65);
+  --accent: oklch(0.82 0.08 55);
+  --accent-foreground: oklch(0.3 0.04 50);
+  --destructive: oklch(0.58 0.17 30);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.89 0.025 80);
+  --input: oklch(0.89 0.025 80);
+  --ring: oklch(0.52 0.07 145);
+  --done: oklch(0.58 0.08 145);
+  --done-soft: oklch(0.88 0.05 140);
+  --shadow-soft: 0 10px 30px -12px oklch(0.4 0.05 60 / 0.25);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3 { font-family: var(--font-display); }
+}
